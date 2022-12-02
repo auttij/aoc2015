@@ -1,4 +1,5 @@
 import logging
+import re
 
 def read_to_str(filepath):
 	logging.info(f"reading file: {filepath}")
@@ -60,6 +61,15 @@ def read_to_2d_int_arr(filepath):
 			else:
 				arr.append(subArr)
 				subArr = []
+	return arr
+
+def read_to_int_tuple_arr(filepath):
+	logging.info(f"reading file: {filepath}")
+	arr = []
+	with open(filepath) as fp:
+		lines = fp.readlines()
+		for line in lines:
+			arr.append(list(map(int, re.findall(r'\d+', line))))
 	return arr
 
 def read_to_int_pair_arr(filepath):
