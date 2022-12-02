@@ -17,8 +17,8 @@ def exercise2(arr):
 
 def main(args=None):
 	arr = init(path.dirname(__file__), inputs.read_to_str, args)
-	exercise1(arr.copy())
-	exercise2(arr.copy())
+	exercise1(arr[::])
+	exercise2(arr[::])
 
 if __name__ == "__main__":
 	main(argv[1:])
