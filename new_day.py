@@ -7,6 +7,7 @@ class newDayCreator():
 		self.day = day
 		self.year = 2015
 		self.force = force
+		self.aoc_url = "https://adventofcode.com/2015/day"
 
 	def create(self):
 		print("Starting new day folder generation")
